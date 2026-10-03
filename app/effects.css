@@ -1,0 +1,27 @@
+.page-progress{position:fixed;z-index:100;top:0;left:0;width:100%;height:3px;background:#9bc0a1;transform:scaleX(0);transform-origin:left center;pointer-events:none;box-shadow:0 0 12px #9bc0a18a}
+.motion-ready [data-reveal]{opacity:0;transform:translate3d(0,24px,0);transition:opacity .7s cubic-bezier(.2,0,0,1),transform .7s cubic-bezier(.2,0,0,1);transition-delay:var(--reveal-delay,0ms)}
+.motion-ready [data-reveal].is-visible{opacity:1;transform:translate3d(0,0,0)}
+.hero-copy>.eyebrow{animation:hero-rise .65s .08s both cubic-bezier(.2,0,0,1)}
+.hero h1{animation:hero-rise .8s .16s both cubic-bezier(.2,0,0,1)}
+.hero-lede{animation:hero-rise .75s .28s both cubic-bezier(.2,0,0,1)}
+.hero-actions{animation:hero-rise .7s .38s both cubic-bezier(.2,0,0,1)}
+.hero-image{animation:hero-image-in 1s .1s both cubic-bezier(.2,0,0,1);transition:filter .7s cubic-bezier(.2,0,0,1)}
+.hero-visual:hover .hero-image{filter:saturate(1.08)}
+.image-note{animation:float-in 5s 1s infinite ease-in-out}
+.hero-tag{animation:badge-float 6s .4s infinite ease-in-out}
+.treatment-card{transition:transform .35s cubic-bezier(.2,0,0,1),box-shadow .35s cubic-bezier(.2,0,0,1),background .25s}
+.treatment-card:hover .treatment-icon{transform:rotate(-9deg) scale(1.08);background:#dce9dc}
+.treatment-icon{transition:transform .35s cubic-bezier(.2,0,0,1),background .25s}
+.button svg,.header-cta svg,.underlined-link svg,.card-arrow svg{transition:transform .25s cubic-bezier(.2,0,0,1)}
+.button:hover svg,.header-cta:hover svg,.underlined-link:hover svg,.treatment-card:hover .card-arrow svg{transform:translate(3px,-2px)}
+.care-image{overflow:hidden}
+.care-image:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,#dcece400 30%,#dcece42b 100%);opacity:0;transition:opacity .6s}
+.care-image:hover:before{opacity:1}
+.underlined-link{background-image:linear-gradient(#86a78e,#86a78e);background-repeat:no-repeat;background-position:left bottom;background-size:0 1px;transition:background-size .3s cubic-bezier(.2,0,0,1),color .2s}
+.underlined-link:hover{background-size:100% 1px}
+@keyframes hero-rise{from{opacity:0;transform:translate3d(0,22px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes hero-image-in{from{opacity:.45;transform:scale(1.035)}to{opacity:1;transform:scale(1)}}
+@keyframes float-in{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes badge-float{0%,100%{transform:rotate(7deg) translateY(0)}50%{transform:rotate(4deg) translateY(-6px)}}
+@media(max-width:640px){.page-progress{height:2px}.motion-ready [data-reveal]{transform:translate3d(0,16px,0)}.image-note{animation-duration:6s}}
+@media(prefers-reduced-motion:reduce){.page-progress{display:none}.hero-copy>.eyebrow,.hero h1,.hero-lede,.hero-actions,.hero-image,.image-note,.hero-tag{animation:none!important}.motion-ready [data-reveal]{opacity:1;transform:none;transition:none}.button,.header-cta,.underlined-link,.treatment-card,.treatment-icon,.button svg,.header-cta svg,.underlined-link svg,.card-arrow svg{transition:none!important}}
