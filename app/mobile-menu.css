@@ -1,0 +1,8 @@
+.mobile-menu{position:relative}
+@media(max-width:640px){.mobile-menu{display:block}}
+.mobile-menu summary{display:grid;place-items:center;width:44px;height:44px;list-style:none;cursor:pointer}
+.mobile-menu summary::-webkit-details-marker{display:none}
+.mobile-menu nav{position:absolute;z-index:5;top:52px;right:0;width:220px;padding:8px;background:var(--white);box-shadow:0 12px 32px #173c3520}
+.mobile-menu nav a{display:block;padding:13px;color:var(--ink);font-size:12px}
+.mobile-menu nav a:hover,.mobile-menu nav a:focus-visible{background:#edf3ec}
+@media(min-width:641px){.mobile-menu{display:none!important}}
